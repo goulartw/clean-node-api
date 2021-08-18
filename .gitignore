@@ -6,6 +6,8 @@ comum/config.js
 /node_modules
 ./node_modules
 node_modules/
+./coverage
+coverage
 node_modules/*
 pdfmake/node_modules
 pdfmake/node_modules/*
