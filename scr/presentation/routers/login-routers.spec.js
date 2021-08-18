@@ -1,6 +1,7 @@
 class LoginRouter {
   route (httpRequest) {
-    if (!httpRequest.body.email) {
+    const { email, password } = httpRequest.body
+    if (!email || !password) {
       return {
         statusCode: 400
       }
@@ -15,6 +16,20 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         password: 'any_password'
+      }
+    }
+    const httpResponse = sut.route(httpRequest)
+    expect(httpResponse.statusCode).toBe(400)
+  })
+})
+
+describe('Login Router', () => {
+  test('Should return 400 if no password is porvided', () => {
+    const sut = new LoginRouter()
+    // System  under teste
+    const httpRequest = {
+      body: {
+        email: 'any_email@email.com'
       }
     }
     const httpResponse = sut.route(httpRequest)
