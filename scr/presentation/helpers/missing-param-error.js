@@ -1,8 +1,6 @@
-module.exports = class HttpResponse {
-  static badRequest (paramsName) {
-    return {
-      statusCode: 400,
-      body: new MissingParamError(paramsName)
-    }
+module.exports = class MissingParamError extends Error {
+  constructor (paramName) {
+    super(`Missing param: ${paramName}`)
+    this.name = 'MissingParamError'
   }
 }
