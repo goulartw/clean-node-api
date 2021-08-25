@@ -18,6 +18,8 @@ appspec.yml
 ./appspec.yml
 /logs/assinaturaeletronica
 /arquivosconvertidos
+
+package-lock.json
 # Compiled source #
 ###################
 *.com

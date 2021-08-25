@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "teste:staged":"jest"
+    "teste:staged": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,10 @@
   "bugs": {
     "url": "https://github.com/goulartw/clean-node-api/issues"
   },
-  "standard":{
-    "env":["jest"]
+  "standard": {
+    "env": [
+      "jest"
+    ]
   },
   "homepage": "https://github.com/goulartw/clean-node-api#readme",
   "devDependencies": {
